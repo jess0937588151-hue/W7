@@ -20,6 +20,16 @@ android {
         aidl = true
     }
 
+    sourceSets {
+        getByName("main") {
+            manifest.srcFile("src/main/AndroidManifest.xml")
+            java.setSrcDirs(listOf("src/main/java", ".."))
+            java.exclude("app/**", ".github/**", "gradle/**", "build/**", "**/*.md", "**/*.kts")
+            res.srcDirs("src/main/res")
+            aidl.srcDirs("src/main/aidl")
+        }
+    }
+
     buildTypes {
         release {
             isMinifyEnabled = false
