@@ -9,7 +9,7 @@ android {
 
     defaultConfig {
         applicationId = "com.example.universalprinter"
-        minSdk = 24   // Android 7.0
+        minSdk = 24
         targetSdk = 34
         versionCode = 1
         versionName = "1.0.0"
@@ -17,6 +17,7 @@ android {
 
     buildFeatures {
         viewBinding = true
+        aidl = true
     }
 
     buildTypes {
