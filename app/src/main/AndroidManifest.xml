@@ -1,0 +1,41 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- Android 11 以下 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" android:maxSdkVersion="30" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" android:maxSdkVersion="30" />
+
+    <!-- Android 12+ -->
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission
+        android:name="android.permission.BLUETOOTH_SCAN"
+        tools:targetApi="s" />
+
+    <uses-feature
+        android:name="android.hardware.usb.host"
+        android:required="false" />
+
+    <!-- Android 11+ package visibility，給 Sunmi bind service 用 -->
+    <queries>
+        <package android:name="woyou.aidlservice.jiuiv5" />
+    </queries>
+
+    <application
+        android:allowBackup="true"
+        android:label="Universal Printer"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Material3.DayNight.NoActionBar">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
