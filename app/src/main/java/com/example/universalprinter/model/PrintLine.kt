@@ -6,3 +6,4 @@ data class PrintLine(
     val bold: Boolean = false,
     val doubleSize: Boolean = false
 )
+
