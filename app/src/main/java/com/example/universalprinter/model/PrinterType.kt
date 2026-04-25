@@ -6,3 +6,4 @@ enum class PrinterType(val label: String) {
     BLUETOOTH_ESC_POS("藍牙印表機 (BT / ESC-POS)"),
     USB_ESC_POS("USB 印表機 (USB / ESC-POS)")
 }
+
