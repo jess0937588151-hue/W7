@@ -9,3 +9,4 @@ data class PrinterConnectionConfig(
     val usbProductId: Int? = null,
     val charsetName: String = "Big5"
 )
+
